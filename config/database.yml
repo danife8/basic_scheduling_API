@@ -1,0 +1,16 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: basic_scheduling_API_development
+  username: <%= ENV['BASIC_SCHEDULING_API_DATABASE_USERNAME'] %>
+  password: <%= ENV['BASIC_SCHEDULING_API_DATABASE_PASSWORD'] %>
+
+production:
+  <<: *default
+  database: basic_scheduling_API_production
+  username: basic_scheduling_API
+  password: <%= ENV['BASIC_SCHEDULING_API_DATABASE_PASSWORD'] %>
