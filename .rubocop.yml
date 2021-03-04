@@ -1,0 +1,55 @@
+require: rubocop-rails
+
+AllCops:
+  Exclude:
+    - 'db/**/*'
+    - 'log/**/*'
+    - 'public/**/*'
+    - 'tmp/**/*'
+    - 'vendor/**/*'
+    - 'node_modules/**/*'
+    - 'bin/**/*'
+    - 'app/**/*'
+    - 'config/**/*'
+  DisplayCopNames: true
+  TargetRubyVersion: 3.0.0
+  EnabledByDefault: true
+
+Metrics/ClassLength:
+  Enabled: false
+
+Layout/LineLength:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Metrics/AbcSize:
+  Max: 20
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Style/Lambda:
+  Enabled: false
+
+Layout/HashAlignment:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Bundler/GemComment:
+  Enabled: false
+
+Lint/ConstantResolution:
+  Enabled: false

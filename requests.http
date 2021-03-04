@@ -1,0 +1,99 @@
+### COURSES - INDEX
+GET http://localhost:3000/api/v1/courses
+Content-Type: application/json
+
+### COURSES - INDEX - Searchable model
+GET http://localhost:3000/api/v1/courses
+Content-Type: application/json
+
+{
+  // "Key" param is a column
+  // "Value" is the value to find
+  "key": "title",
+  "value": "Curso1"
+}
+
+### COURSES - CREATE :params
+POST http://localhost:3000/api/v1/courses
+Content-Type: application/json
+
+{
+  "code": "3",
+  "title": "Course3",
+  "description": "Description of the Course3 course"
+}
+
+### COURSES - SHOW :id
+POST http://localhost:3000/api/v1/courses/2
+Content-Type: application/json
+
+
+### COURSES - UPDATE :params
+PATCH http://localhost:3000/api/v1/courses/3
+Content-Type: application/json
+
+{
+  "code": "3",
+  "title": "Course3",
+  "description": "Description of the Course3 course"
+}
+
+### COURSES - DESTROY :id
+DELETE http://localhost:3000/api/v1/courses/1
+Content-Type: application/json
+
+### STUDENT - INDEX
+GET http://localhost:3000/api/v1/students
+Content-Type: application/json
+
+### STUDENT - INDEX - Searchable model
+GET http://localhost:3000/api/v1/students
+Content-Type: application/json
+
+{
+  // "Key" param is a column
+  // "Value" is the value to find
+  "key": "first_name",
+  "value": "John"
+}
+
+### STUDENT - CREATE :params
+POST http://localhost:3000/api/v1/students
+Content-Type: application/json
+
+{
+  "student_id": "4",
+  "first_name": "John",
+  "last_name": "Doe"
+}
+
+### STUDENT - UPDATE :params
+PATCH http://localhost:3000/api/v1/students/1
+Content-Type: application/json
+
+{
+  "student_id": "3",
+  "first_name": "Jane",
+  "last_name": "Dove"
+}
+
+### STUDENT - DESTROY :id
+DELETE http://localhost:3000/api/v1/students/1
+Content-Type: application/json
+
+### INSCRIPTION - INDEX
+GET http://localhost:3000/api/v1/inscriptions
+Content-Type: application/json
+
+### INSCRIPTION - CREATE :params
+POST http://localhost:3000/api/v1/inscriptions
+Content-Type: application/json
+
+{
+  "course_id": "2",
+  "student_id": "3"
+}
+
+### INSCRIPTION - DESTROY :id
+DELETE http://localhost:3000/api/v1/inscriptions/3
+Content-Type: application/json
